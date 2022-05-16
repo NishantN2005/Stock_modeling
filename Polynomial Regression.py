@@ -25,6 +25,7 @@ y=y1[:,np.newaxis]
 for x in range(len(data['candles'])):
     y[x,0]=data['candles'][x]['close']
     #np.append(y,data['candles'][x]['close'],axis=None)
+#I am here
 #print(y)
 x1=np.empty(len(data['candles']))
 x=x1[:,np.newaxis]
