@@ -6,7 +6,7 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 #API data reception
 
-key='ZTHLZTU4U9FROM66OZ3RUKL7GGLIVJVP'
+key=#Enter API KEY
 def get_price_history(**kwargs):
     url="https://api.tdameritrade.com/v1/marketdata/{}/pricehistory".format(kwargs.get('symbol'))
     params={}
@@ -15,7 +15,8 @@ def get_price_history(**kwargs):
         parameter={arg: kwargs.get(arg)}
         params.update(parameter)
     return requests.get(url, params=params).json()
-
+requests.get(url,)
+ticker=input("Enter ticker symbol in all caps (EX: APPL).")
 # array for dependant variable (closing price)
 data= get_price_history(symbol='SPOT', period=1, periodType='year', frequencyType='daily', frequency=1)
 
